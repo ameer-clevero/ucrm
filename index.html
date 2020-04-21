@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FreshCRM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+    </head>
+
+<body>
+    <nav class="flex items-center justify-between flex-wrap bg-blue-500 p-3">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <i class="fas fa-hand-holding-usd m-2"></i>
+            <span class="font-semibold text-xl tracking-tight">FreshCRM</span>
+        </div>
+        <div class="block lg:hidden">
+			<button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray hover:border-gray">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</button>
+		</div>
+        <div class="w-full hidden lg:block flex-grow lg:flex lg:items-center lg:w-auto" id="nav-content">
+            <div class="text-sm lg:flex-grow">
+                <a href="#responsive-header"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                    Docs
+                </a>
+                <a href="#responsive-header"
+                    class="block mt-4 lg:inline-block lg:mt-0 text-white font-bold hover:text-white mr-4">
+                    CRM
+                </a>
+                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                    Billing
+                </a>
+                <a class="m-12">
+                    <input type="search" name="search" placeholder="🔍   Search"
+                        class="md:w-1/3 bg-blue-300 text-white placeholder-white h-8 px-5 pr-10 rounded-full text-sm focus:outline-none">
+                </a>
+            </div>
+            <div>
+                    <i class="text-white far fa-bell"></i>
+                <a>
+                    <button class="overflow-hidden text-white font-semibold h-8 px-5 pr-10">
+                        <div class="username">ameermuhammed
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+
+                    </button>
+                </a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="dashboard">
+        <div class="block lg:hidden float-left opacity-75">
+			<button id="dashboard-toggle" class="bg-black flex items-center px-3 py-2 border rounded text-white border-white hover:text-gray hover:border-gray">
+				<i class="fa fa-tachometer-alt" aria-hidden="true"></i>
+			</button>
+		</div>
+        <ul class="hidden lg:block w-56 h-screen bg-gray-800 float-left text-white" id="dashboard-content">
+            <li class="hover:bg-gray-900 block h-12 mb-3 p-2 h-10">
+                <i class="fa fa-tachometer-alt mx-3 my-2 float-left w-10" aria-hidden="true"></i>
+                <label class="float-left my-1">Dashboard</label>
+            </li>
+
+            <li class="hover:bg-gray-900 block my-3 p-2 h-10">
+                <i class="fa fa-users  mx-3 float-left w-10" aria-hidden="true"></i>
+                <label class="float-left">Clients</label></li>
+
+            <li class="hover:bg-gray-900 block my-3 p-2 h-10">
+                <i class="fa fa-list  mx-3 float-left w-10" aria-hidden="true"></i>
+                <label class="float-left">Invoices</label>
+            </li>
+
+            <li class="hover:bg-gray-900 block my-3 p-2 h-10">
+                <i class="fa fa-credit-card  mx-3 float-left w-10" aria-hidden="true"></i>
+                <label class="float-left">Payments</label>
+            </li>
+
+            <li class="hover:bg-gray-900 block my-3 p-2 h-10">
+                <i class="fa fa-calendar-check  mx-3 float-left w-10" aria-hidden="true"></i>
+                <label class="float-left">Scheduling</label>
+            </li>
+
+            <li class="hover:bg-gray-900 block my-3 p-2 h-10">
+                <i class="fa fa-comments  mx-3 float-left w-10" aria-hidden="true"> </i>
+                <label class="float-left">Ticketing</label>
+            </li>
+          
+            <li class="hover:bg-gray-900 block my-3 p-2" id="reports-submenu">
+               <i class="fa fa-chart-line mx-3 float-left w-10" aria-hidden="true"></i>
+                <label class="float-left">Reports</label>
+              <i id="report-nav-icon" class="fas fa-angle-down ml-4"></i>
+            <ul id="reports-menu" class="hidden text-sm text-gray-500">
+                <li class="hover:text-white block mx-5 p-2" id="data-reports">Data Usage</li>
+                <li class="hover:text-white block mx-5 p-2" href="#">Billing</li>
+            </ul>
+              </li>
+
+            <li class="hover:bg-gray-900 block mb-3 p-2 h-10">
+                <i class="fa fa-cogs mx-3 float-left w-10" aria-hidden="true"></i>
+                <label class="float-left">System</label></li>
+             </ul>   
+
+
+    </div>
+    <div>
+        <iframe class="w-10/12" src="./invoices.html" frameborder="0" scrolling="no" height="650px"></iframe>
+    </div>
+</body>
+<script>
+    //Javascript to toggle the menu
+    document.getElementById('nav-toggle').onclick = function(){
+        document.getElementById("nav-content").classList.toggle("hidden");
+    }
+    document.getElementById('dashboard-toggle').onclick = function(){
+        document.getElementById("dashboard-content").classList.toggle("hidden");
+    }  
+    document.getElementById('reports-submenu').onclick = function(){
+        document.getElementById("reports-menu").classList.toggle("hidden");
+        if(document.getElementById("report-nav-icon").classList.contains("fa-angle-down"))
+        document.getElementById("report-nav-icon").classList.replace("fa-angle-down","fa-angle-up");
+        else
+        document.getElementById("report-nav-icon").classList.replace("fa-angle-up","fa-angle-down");   
+    }  
+</script>
+</html>
