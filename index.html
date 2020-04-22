@@ -74,12 +74,12 @@
             <li class="hover:bg-gray-900 block my-3 p-2 h-10">
                 <i class="fa fa-users  mx-3 float-left w-10" aria-hidden="true"></i>
                 <label class="float-left">Clients</label></li>
-
-            <li class="hover:bg-gray-900 block my-3 p-2 h-10">
-                <i class="fa fa-list  mx-3 float-left w-10" aria-hidden="true"></i>
-                <label class="float-left">Invoices</label>
-            </li>
-
+            <a href="#" onclick="loadiframe('invoices')">
+                <li class="hover:bg-gray-900 block my-3 p-2 h-10">
+                    <i class="fa fa-list  mx-3 float-left w-10" aria-hidden="true"></i>
+                    <label class="float-left">Invoices</label>
+                </li>
+            </a>
             <a href="#" onclick="loadiframe('payments')">
                 <li class="hover:bg-gray-900 block my-3 p-2 h-10">
                     <i class="fa fa-credit-card  mx-3 float-left w-10" aria-hidden="true"></i>
@@ -135,7 +135,7 @@
             document.getElementById("report-nav-icon").classList.replace("fa-angle-up", "fa-angle-down");
     }
     function loadiframe(page) {
-        var url="https://ameer-clevero.github.io/ucrm/"+page;
+        var url = "https://ameer-clevero.github.io/ucrm/" + page;
         document.getElementById("iframemain").src = url;
     } 
 </script>
