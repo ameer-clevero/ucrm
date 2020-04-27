@@ -94,12 +94,12 @@
     <!-- navbar -->
     <ul class="invoice-navbar text-gray-600">
         <a href="payments.html">
-            <li class="inline-block md:p-3 md:m-2 border border-gray-200 activenav">
+            <li class="inline-block md:p-3 md:m-2 border border-gray-200">
                 All payments
             </li>
         </a>
         <a href="paymentsOnlyattached.html">
-            <li class="inline-block md:p-3 md:m-2 border border-gray-200">
+            <li class="inline-block md:p-3 md:m-2 border border-gray-200 activenav">
                 Only unattached
             </li>
         </a>
@@ -109,36 +109,15 @@
             </li>
         </a>
     </ul>
-
     <!-- data grid header-->
     <div class="bg-gray-400 w-screen h-screen">
         <span class="inline-block m-4 px-2 py-1 font-semibold bg-white text-gray-600 border rounded border-gray-500">
             <input type="checkbox" id="selection" name="selection" />
             <label for="selection"> 0 </label>
         </span>
-        <div class="dropdown inline-block relative z-0">
-            <button
-                class="bg-white text-gray-700 py-1 px-4 rounded inline-flex items-center border border-gray-500">
-                <span><i class="fa fa-file-alt" aria-hidden="true"></i> Export </span>
-                <i class="fas fa-angle-down ml-4"></i>
-            </button>
-            <ul class="dropdown-content absolute hidden text-gray-700 border border-gray-500">
-                <li>
-                    <a class="rounded-t bg-white hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Export
-                        CSV</a>
-                </li>
-                <li>
-                    <a class="bg-white hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">Export PDF</a>
-                </li>
-                <li>
-                    <a class="rounded-b bg-white hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
-                        href="#">Print</a>
-                </li>
-            </ul>
-        </div>
         <div class="md:hidden"></div>
         <input type="text" name="search" placeholder="🔍   Search"
-            class="bg-gray-200 m-2 md:w-1/12 text-gray-800 placeholder-gray-600 md:px-4 rounded" />
+            class="bg-gray-200 m-2 md:w-2/12 text-gray-800 placeholder-gray-600 md:px-4 rounded" />
         <div class="md:hidden"></div>
         <span class="text-gray-600 md:mx-2">
             <i class="fa fa-calendar-check text-xl mr-1" aria-hidden="true"></i>
@@ -184,32 +163,16 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>PayPal credit card</td>
-                    <td>	D Jay</td>
-                    <td>$7.67</td>
-                    <td>8 Mar 2020 10:15 pm</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>PayPal credit card</td>
-                    <td>	D Jay</td>
-                    <td>$10.00</td>
-                    <td>8 Apr 2020 10:15 pm</td>
-                    <td>---</td>
-                </tr>
-                <tr>
-                    <td>---</td>
-                    <td>	D Jay</td>
-                    <td>$8.50</td>
-                    <td>8 May 2020 10:15 pm</td>
-                    <td>djay</td>
-                </tr>
-            </tbody>
+                
+                  <td>There are no rows in the table...</td>
+                  <td></td> <td></td> <td></td> <td></td> 
+                </tr>     
+              </tbody>
         </table>
 
         <div class="dropdown inline-block relative m-4">
             <button class="bg-white text-gray-700 py-1 px-4 rounded inline-flex items-center border border-gray-500">
-                <span> 3 of 3 </span> <i class="fas fa-angle-down ml-4"></i>
+                <span> 0 of 0 </span> <i class="fas fa-angle-down ml-4"></i>
             </button>
             <ul class="dropdown-content absolute hidden text-gray-700 pt-1">
                 <li>
