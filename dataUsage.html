@@ -65,71 +65,54 @@
 <body>
     <!-- header -->
     <div class="md:m-4">
-        <label class="text-lg">Payments</label>
-        <div class="dropdown inline-block relative z-50">
-            <button class="bg-blue-500 md:ml-5 px-3 text-sm py-1 inline-flex items-center rounded text-white">
-                <span> + Refund </span> <i class="fas fa-angle-down ml-4"></i>
-            </button>
-            <ul class="dropdown-content absolute hidden text-gray-700 border border-gray-500 rounded ml-5">
-                <li>
-                    <a class="rounded-t bg-white hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">
-                        <i class="far fa-credit-card mx-2"></i>Payment</a>
-                </li>
-                <li>
-                    <a class="bg-white hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap" href="#">
-                        <i class="fas fa-money-check-alt mx-2"></i>Multiple Payments</a>
-                </li>
-                <li>
-                    <a class="rounded-b bg-white hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
-                        href="#"><i class="fas fa-file-invoice-dollar mx-2"></i>Import Payments</a>
-                </li>
-                <li>
-                    <a class="rounded-b bg-white hover:bg-gray-200 py-2 px-4 block whitespace-no-wrap"
-                        href="#"><i class="fas fa-redo-alt mx-2"></i>Refund</a>
-                </li>
-            </ul>
-        </div>
+        <label class="text-lg">Data Usage</label>
+        <button class="font-bold px-5 border border-blue-500 rounded md:ml-5 text-blue-500"><i class="fa fa-sync-alt"
+            aria-hidden="true"></i></button>
     </div>
 
     <!-- navbar -->
     <ul class="invoice-navbar text-gray-600">
-        <a href="payments.html">
-            <li class="inline-block md:p-3 md:m-2 border border-gray-200">
-                All payments
-            </li>
-        </a>
-        <a href="paymentsOnlyattached.html">
-            <li class="inline-block md:p-3 md:m-2 border border-gray-200">
-                Only unattached
-            </li>
-        </a>
-        <a href="paymentsRefunds.html">
+        <a href="dataUsage.html">
             <li class="inline-block md:p-3 md:m-2 border border-gray-200 activenav">
-                Refunds
+                Overview
             </li>
         </a>
     </ul>
 
     <!-- data grid header-->
     <div class="bg-gray-400 w-screen h-screen">
-        <span class="inline-block m-4 px-2 py-1 font-semibold bg-white text-gray-400 border rounded border-gray-500">
-            <input type="checkbox" id="selection" name="selection" disabled />
-            <label for="selection"> 0 </label>
+        <span class="md:mr-48 md:float-right">
+            <input type="text" name="search" placeholder="Service plan"
+                class="bg-gray-200 m-2 text-gray-800 placeholder-gray-600 md:px-4 rounded">
+            <i class="fas fa-times  text-gray-600 mx-3 text-xl"></i>
+            <i class="fas fa-check  text-gray-600 mx-3 text-xl"></i>
         </span>
         
         <!-- grid -->
         <table class="mx-4 w-4/5 text-gray-900 text-sm">
             <thead>
                 <tr>
-                    <th>CREATED DATE</th>
-                    <th>METHOD</th>
-                    <th>CLIENT</th>
-                    <th>AMOUNT</th>
+                    <th>NAME</th>
+                    <th>SERVICE</th>
+                    <th>SERVICE PLAN</th>
+                    <th>DATA USAGE LIMIT</th>
+                    <th>LAST PERIOD</th>
+                    <th>LAST PERIOD TRAFFIC</th>
+                    <th>LAST PERIOD TOTAL</th>
+                    <th>CURRENT PERIOD</th>
+                    <th>CURRENT PERIOD TRAFFIC</th>
+                    <th>CURRENT PERIOD TOTAL</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>There are no rows in the table...</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

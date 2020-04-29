@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FreshCRM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .invoice-navbar li:hover {
+            border-bottom: 2px solid blue;
+            color: #000;
+        }
+
+        .activenav {
+            border-bottom: 2px solid blue;
+            color: #000;
+            background-color: rgba(203, 213, 224, 0.2);
+        }
+
+      
+
+        th,
+        td {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        td,
+        th,
+        tr {
+            border: 1px solid rgb(226, 226, 226);
+            padding: 3px;
+            text-align: center;
+            background-color: white;
+            font-weight: 500;
+        }
+
+        tr:nth-child(even) td {
+            background: #f8f6ff;
+        }
+
+        td span {
+            font-size: 12px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <div class="md:m-4">
+        <label class="text-lg">Reports</label>
+    </div>
+
+    <!-- invoice navbar -->
+    <ul class="invoice-navbar text-gray-600">
+        <a href="billing_invoiced_revenue.html">
+            <li class="inline-block md:p-3 md:m-2 border border-gray-200">
+                Invoiced revenue
+            </li>
+        </a> <a href="billing_taxes.html">
+            <li class="inline-block md:p-3 md:m-2 border border-gray-200 activenav"> Taxes
+            </li>
+        </a>
+    </ul>
+
+    <div class="bg-gray-400 w-screen h-screen">
+        <div class="w-4/5">
+            <div class="w-5/12 float-left m-4 px-2 h-32 inline-block border border-gray-500 bg-white">
+             <div class="p-2"><label for="from">From<span class="text-red-600">*</span></label><input class="float-right border border-gray-500 px-2 rounded" type="date" id="from"></div>
+             <div  class="p-2"><label for="to">To<span class="text-red-600">*</span></label> <input class="float-right  border border-gray-500 px-2 rounded" type="date" id="to"></div>
+              <div class="p-2"><label for="org">Organization<span class="text-red-600">*</span></label><input class="float-right  border border-gray-500 px-2 rounded" type="text" id="org"></div>
+            </div>
+            <div class="w-5/12 float-right px-2 m-4 h-32 inline-block border border-gray-200 bg-white"> 
+                <div>OVERVIEW</div> <br>
+                <div><span class="text-gray-600 mx-24">Total</span> $47.17</div>
+            </div>
+        </div>
+
+        
+        <!-- grid --> <br>
+        <table class="mx-4 w-4/5 text-gray-900 text-sm">
+            <thead>
+                <tr>
+                    <th>TAXNAME</th>
+                    <th>AGENCY</th>
+                    <th>TAXABLE AMOUNT</th>
+                    <th>TAX RATE</th>
+                    <th>TAX</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>There are no rows in the table...</td><td></td><td></td><td></td><td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
